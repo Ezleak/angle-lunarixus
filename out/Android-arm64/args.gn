@@ -10,27 +10,24 @@ angle_build_all = false
 target_cpu = "arm64"
 
 # Target ndk API 26 to make sure ANGLE can use the Vulkan backend on Android
-android32_ndk_api_level = 26
-android64_ndk_api_level = 29
+android32_ndk_api_level = 24
+android64_ndk_api_level = 24
 
 # Disable all backends except Vulkan
 angle_enable_vulkan = true
-angle_enable_gl = false
+angle_enable_gl = true
 angle_enable_d3d9 = false
 angle_enable_d3d11 = false
 angle_enable_null = false
 angle_enable_metal = false
-angle_enable_gl_desktop_backend = true
 angle_enable_gl_desktop_frontend = true
 
 # SwiftShader is loaded as the system Vulkan driver on Android, not compiled by ANGLE
 angle_enable_swiftshader = false
 
 # Disable all shader translator targets except desktop GL (for Vulkan)
-angle_enable_essl = true
+angle_enable_hlsl = true
 angle_enable_glsl = true
-#angle_enable_wgpu = true
-#angle_enable_vksl = true
 
 #angle_enable_commit_id = false
 
